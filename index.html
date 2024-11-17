@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body class="">
+    <header>
+         <!-- nav  -->
+    <div class="navbar mb-24 bg-purple-500 fixed">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><button onclick="showHome()" class="btn">Home</button></li>
+                    <li><button onclick="showExperience()" class="btn">Experience</button></li>
+                    <li><button onclick="showProjects()" class="btn">Projects</button></li>
+                    <li><button onclick="showCV()" class="btn">CV</button></li>
+                    <li><button onclick="showContact()" class="btn">Contact</button></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl">Shahinul Alam Murad</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-3">
+                <li><button onclick="showHome()" class="btn">Home</button></li>
+                <li><button onclick="showExperience()" class="btn">Experience</button></li>
+                
+                <li><button onclick="showProjects()" class="btn">Projects</button></li>
+                <li><button onclick="showCV()" class="btn">CV</button></li>
+                <li><button onclick="showContact()" class="btn">Contact</button></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <label class="swap swap-rotate">
+              <!-- Dark mode toggle -->
+              <input id="dark-mode-toggle" type="checkbox" />
+              <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              </svg>
+              <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+              </svg>
+            </label>
+          </div>
+    </div>
+    </header>
+   
+
+
+    <!-- introduction(banner) section start -->
+    <section id="banner-introduction"
+        class="pt-32 pt-10 pb-10  bg-gray-900 text-white flex flex-col justify-center items-center lg:flex-row gap-10 min-h-screen">
+        <!-- profile  -->
+        <div class="text-center flex flex-col justify-center items-center space-x-3 gap-4 lg:ml-52">
+            <div class="rounded-full w-96 h-96"><img class="rounded-full" src="images/pic.JPG" alt=""></div>
+            <div>
+                <h1 class="text-2xl font-bold">Shahinul Alam Murad</h1>
+                <h3 class="text-lg font-medium ">Under Graduate Student</h3>
+                <h3 class="text-lg font-medium ">Department of CSE</h3>
+                <h3 class="text-lg font-medium ">JAHANGIRNAGAR UNIVERSITY</h3>
+                <div class="flex justify-evenly space-x-4  text-center">
+                    <a href="https://www.facebook.com/profile.php?id=61556554021341" target="_blank"
+                        class="text-xl text-blue-600">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/murad.munshi.22/" target="_blank" class="text-xl text-pink-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/" target="_blank"
+                        class="text-xl text-blue-700">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/shahinul22" target="_blank" class="text-xl text-purple-800">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- about  -->
+        <div class="p-3">
+            <!-- introo -->
+            <div class="mt-10 p-6 bg-gray-800 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold mb-4">About Me</h1>
+                <p class="text-lg mb-4">
+                    I am <span class="font-semibold">Shahinul Alam Murad</span>, a Computer Science and Engineering
+                    student at Jahangirnagar University. I am passionate about Artificial Intelligence, Neural Networks,
+                    and Software Engineering. Currently, I am developing my skills in these fields through coursework,
+                    personal projects, and internships.
+                </p>
+                <p class="text-lg mb-4">
+                    In my free time, I enjoy gardening, photography, and spending time with my cats. I am also
+                    constantly learning new technologies to stay updated with the latest trends in software development.
+                </p>
+                <p class="text-lg">Feel free to connect with me through any of the links above!</p>
+                <div class="p-4">
+                    <button class="btn btn-outline btn-accent"><i class="fas fa-download"></i> Download CV</button>
+                </div>
+
+            </div>
+
+            <div class="mt-10 p-4 flex flex-col lg:flex-row  gap-6">
+                <div class="gap-3">
+                    <h2 class="text-2xl font-semibold">Interests</h2>
+                    <ul class="mt-2 text-left p-4  space-y-2 list-disc ">
+                        <li>Cybersecurity</li>
+                        <li>Cryptography and Privacy</li>
+                        <li>Data Mining</li>
+                        <li>Neural Networks</li>
+                        <li>Software Engineeing</li>
+                    </ul>
+                </div>
+                <div class="gap-3">
+                    <h2 class="text-2xl font-semibold">Education</h2>
+                    <div class="mt-4 space-y-4 ">
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap text-white mr-2"></i>
+                            <div>
+                                <p>Studies at Department of Computer Science & Engineering</p>
+                                <p class="text-gray-400">Jahangirnagar University, , Dhaka-1342</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap text-white mr-2"></i>
+                            <div>
+                                <p>Higher Secondary School Certificate</p>
+                                <p class="text-gray-400">Govt. Bangabandhu College, Gopalganj</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap text-white mr-2"></i>
+                            <div>
+                                <p>Secondary School Certificate</p>
+                                <p class="text-gray-400">Basuria Senerchor High School, Tungipara, Gopalganj</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- introduction section end  -->
+    <!-- mission and vission -->
+    <section id="mission" class="pt-10 max-w-3xl mx-auto space-y-12 min-h-screen">
+        <h1 class="text-3xl text-center">
+            <label class="swap swap-flip text-3xl">
+                <!-- this hidden checkbox controls the state -->
+                <input type="checkbox" />
+
+                <div class="swap-on">😈</div>
+                <div class="swap-off">😇</div>
+            </label>
+            Mission & Vission
+        </h1>
+        <p class="text-xl p-3">Mission -> As a passionate and detail-oriented Frontend Developer, my mission is to craft
+            intuitive, accessible, and aesthetically compelling web experiences. I believe that a website is more than
+            just a digital presence—it’s an opportunity to connect, engage, and inspire. I am dedicated to building
+            interfaces that not only look beautiful but also deliver seamless, user-friendly experiences across all
+            devices.</p>
+        <p class="text-xl p-3">vision-> My vision is to be at the forefront of web development innovation, continually
+            learning, evolving, and pushing the boundaries of what’s possible in frontend design and functionality. I
+            aim to create web applications that are as fast and responsive as they are visually engaging. By embracing
+            new technologies and design trends, I strive to help businesses and individuals turn their ideas into
+            reality through well-crafted digital experiences. 💎</p>
+    </section>
+    <!-- experience section start -->
+    <section id="experience" class="pt-24 max-w-4xl mx-auto space-y-12 hidden">
+        <!-- Experience Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 p-4">Experience</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="p-2 bg-green-100 text-black rounded-full">
+                            <!-- Icon -->
+                            <svg fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-black
+                            ">
+                                <!-- Add SVG path or shape content here -->
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Executive member at Regional Club</h3>
+                        <p class="text-sm text-gray-500">Govt. Bangabandhu College, Gopalganj • January 2013 – Present
+                        </p>
+                        <p class="mt-4">Responsibilities include:</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                            <li>National Science Olympiad</li>
+                            <li>National Mathematics Olympiad</li>
+                            <li> Regional Mathematics Olympiad</li>
+                            <li> Regional Science Olympiad</li>
+                            <li>Mathematics country-wide examinations</li>
+                            <li>National Science Olympiad country-wide examinations</li>
+                            <li>Participant at regional Mathematics Olympiad</li>
+                            <li>Participant at national Science Olympiad</li>
+                            <li>Participant at regional Volleyball Championship</li>
+                            <li>Participant at regional Debate competition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 p-4">Education</h2>
+            <div class="space-y-8">
+
+                <!-- University Education -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="p-2 bg-green-100 text-green-600 rounded-full">
+                                <!-- Icon -->
+                                <i class="fas fa-graduation-cap text-black mr-2"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Studies at Department of Computer Science & Engineering
+                            </h3>
+                            <p class="text-sm text-gray-500">Jahangirnagar University, Savar, Dhaka-1342 <br> March 2022
+                                –
+                                March 2026</p>
+                            <p class="mt-2">CGPA: 3.13/4.00 (Till 2nd year)</p>
+                            <p class="mt-4">Courses included:</p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Data and Telecommunication</li>
+                                <li>Web Development</li>
+                                <li>Data Structure and Algorithms</li>
+                                <li>Database Management Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Education -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="p-2 bg-green-100 text-green-600 rounded-full">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 2a7 7 0 00-7 7v4H3a1 1 0 000 2h3v6a1 1 0 001 1h10a1 1 0 001-1v-6h3a1 1 0 000-2h-2V9a7 7 0 00-7-7zm5 11v7H7v-7a1 1 0 00-1-1H5v-3a5 5 0 1110 0v3h-1a1 1 0 00-1 1z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Higher Secondary School Certificate</h3>
+                            <p class="text-sm text-gray-500">Govt. Bangabandhu College, Gopalganj <br> June 2018 –
+                                February 2020
+                            </p>
+                            <p class="mt-2">GPA: 4.83/5.00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- skills and hobbies -->
+        <div class="text-center mb-20 mt-80 bg-white flex flex-col items-center justify-center min-h-screen">
+            <div>
+                <h1 class="text-2xl font-bold mb-8">Skills & Hobbies</h1>
+            </div>
+            <div class="flex justify-center gap-24">
+                <!-- Technical Skills -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Technical Skills</h2>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="mr-2"><i class="fa-brands fa-python"></i></span> PYTHON
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-chart-simple"></i></span> DATA SCIENCE
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-database"></i></span> SQL
+                        </li>
+                    </ul>
+                </div>
+                <!-- Hobbies -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Hobbies</h2>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-person-hiking"></i></span> HIKING
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">🐱</span> CATS
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-camera"></i></span> PHOTOGRAPHY
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="text-center bg-white flex flex-col items-center justify-center ">
+                <h1 class="mt-20 text-2xl font-bold mb-4">Achievements</h1>
+                <div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
+                    <div class="flex flex-col items-start gap-5">
+                        <!-- Icon/Logo -->
+                        <i class="fa-brands fa-free-code-camp text-3xl text-white bg-black"></i>
+                        <div class="text-left">
+                            <!-- Title with hover effect -->
+                            <a class="link-hover-effect text-2xl font-semibold"
+                                href="https://freecodecamp.org/certification/shahinul_alam_murad/responsive-web-design">
+                                <div class="wavy p-3">
+                                    <span style="--i:1">F</span>
+                                    <span style="--i:2">r</span>
+                                    <span style="--i:3">e</span>
+                                    <span style="--i:4">e</span>
+                                    <span style="--i:5">C</span>
+                                    <span style="--i:6">o</span>
+                                    <span style="--i:7">d</span>
+                                    <span style="--i:8">e</span>
+                                    <span style="--i:9">C</span>
+                                    <span style="--i:10">a</span>
+                                    <span style="--i:11">m</span>
+                                    <span style="--i:12">p</span>
+                                    <span style="--i:13">C</span>
+                                    <span style="--i:14">e</span>
+                                    <span style="--i:15">r</span>
+                                    <span style="--i:16">t</span>
+                                    <span style="--i:17">i</span>
+                                    <span style="--i:18">f</span>
+                                    <span style="--i:19">i</span>
+                                    <span style="--i:20">c</span>
+                                    <span style="--i:21">a</span>
+                                    <span style="--i:22">t</span>
+                                    <span style="--i:23">e.</span>
+                                    <span style="--i:24">.</span>
+                                    <span style="--i:25">.</span>
+                                    <span style="--i:26">.</span>
+                                    <span style="--i:27">.</span>
+                                    <span style="--i:28">.</span>
+
+                                </div>
+                                <!-- FreecodeCampCertificate -->
+                            </a>
+                            <!-- Subtitle -->
+                            <p class="text-sm text-gray-500">FreecodeCamp · September 2024</p>
+                            <!-- Description -->
+                            <p class="mt-2 text-gray-700">
+                                I have successfully completed the Freecodecamp Certification Project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- language -->
+            <div>
+                <div>
+                    <h2 class="mt-20 text-3xl font-bold mb-4">Language</h2>
+                </div>
+                <div class="flex flex-col lg:flex-row justify-evenly items-center gap-5">
+                    <div class="flex flex-col gap-4">
+                        <div class="radial-progress text-green-500"
+                            style="--value:100; --size:12rem; --thickness: 1rem;" role="progressbar">
+                            100%
+                        </div>
+                        <h2 class="text-2xl font-semibold">Bangla</h2>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="radial-progress text-green-500" style="--value:33; --size:12rem; --thickness: 1rem;"
+                            role="progressbar">
+                            33%
+                        </div>
+                        <h2 class="text-2xl font-semibold">English</h2>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="radial-progress text-green-500" style="--value:70; --size:12rem; --thickness: 1rem;"
+                            role="progressbar">
+                            70%
+                        </div>
+                        <h2 class="text-2xl font-semibold">Arabic</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- experiencew sectioni end  -->
+
+    <!-- cv start -->
+    <section id="cv" class="pt-24 space-y-4 divide-y-4 divide-purple-500 hidden">
+        <!-- Title -->
+        <div id="a1" class="wavy2 p-3 text-4xl font-bold text-center  inset-0 flex justify-center items-center">
+            <div>
+                <span style="--i:1">C</span>
+                <span style="--i:2">V</span>
+                <span style="--i:3"> </span>
+                <span style="--i:4"> </span>
+                <span style="--i:5">R</span>
+                <span style="--i:6">e</span>
+                <span style="--i:7">s</span>
+                <span style="--i:8">u</span>
+                <span style="--i:9">m</span>
+                <span style="--i:10">e</span>
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <div id="a2" class=" inset-0 flex  justify-center items-center max-w-2xl w-full mx-auto">
+            <div>
+                <img class="w-60 h-72 p-3" src="images/pic.JPG" alt="">
+            </div>
+            <div class="space-y-3 text-center">
+                <h1 class="text-4xl font-bold">Shahinul Alam Murad</h1>
+                <p class="text-xl text-gray-500 font-normal">Undergraduate Student</p>
+                <p class="text-xl text-gray-500 font-normal">Jahangirnagar University</p>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div id="a3" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-4xl font-bold">Summary</h2>
+            <p class="text-gray-500 text-left">
+                A dedicated and skilled AI Developer with a strong educational background and hands-on experience in
+                building dynamic and user-friendly web applications related to AI. Proficient in C++, JAVA, HTML, CSS,
+                JavaScript, and modern front-end frameworks. Passionate about delivering high-quality, efficient code to
+                create seamless user experiences.
+            </p>
+        </div>
+
+        <!-- Education -->
+        <div id="a4" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto space-y-4 p-3">
+            <h1 class="text-3xl font-bold">Education</h1>
+            <div>
+                <h2 class="text-xl font-medium">Jahangirnagar University</h2>
+                <h4 class="text-gray-500">Computer Science & Engineering [Running]</h4>
+                <h4 class="text-gray-500">[Expected Graduation Year: 2026]</h4>
+            </div>
+            <div>
+                <h2 class="text-xl font-medium">Govt. Bangabandhu College, Gopalganj</h2>
+                <p class="text-gray-500">Higher Secondary Certificate (HSC) | GPA: 4.83</p>
+                <p class="text-gray-500">[Year of Completion: 2020]</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-medium">Basuria Sener Chor High School, Tungipara, Gopalganj</h2>
+                <p class="text-gray-500">Secondary School Certificate (SSC) | GPA: 4.67</p>
+                <p class="text-gray-500">[Year of Completion: 2018]</p>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div id="a5" class=" inset-0 flex flex-col justify-center items-center max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold">Skills</h2>
+            <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+                <li>Languages & Frameworks: JAVA, C++, HTML, CSS, JavaScript, React, Bootstrap</li>
+                <li>Version Control: Git, GitHub</li>
+                <li>Responsive Web Design: Mobile-first design, Flexbox, CSS Grid</li>
+                <li>Tools & Technologies: Visual Studio Code, Code Blocks, npm, Webpack, Babel, Chrome Developer Tools
+                </li>
+                <li>Web Performance Optimization: Code splitting, lazy loading, image optimization</li>
+            </ul>
+        </div>
+        <!-- project -->
+        <div id="projects" class=" inset-0 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold">Projects</h2>
+            <!-- 1 -->
+            <a href="https://shahinul22.github.io/alphabet-clash/" target="_blank">
+                <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                    <figure>
+                        <img src="images/alpha.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Alphabet Clash</h2>
+                        <p>Alphabet Clash is a fast-paced letter-finding game that challenges your speed and accuracy.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="https://shahinul22.github.io/daisy-tea-house-/" target="_blank">
+                <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                    <figure>
+                        <img src="images/tea.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Tea House</h2>
+                    </div>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="https://shahinul22.github.io/biker---zone-daisy-UI/#slide3" target="_blank">
+                <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                    <figure>
+                        <img src="images/bike.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Biker Zone</h2>
+                    </div>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="https://shahinul22.github.io/geometry-genius/" target="_blank">
+                <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                    <figure>
+                        <img src="images/geo.jpg" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Geometry Genius</h2>
+                    </div>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="https://github.com/shahinul22/transport-management-system" target="_blank">
+                <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                    <figure>
+                        <img src="images/ja.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Transport Management System</h2>
+                        <p>The Transport Management System for bus ticket booking is a Java-based GUI application
+                            designed to streamline bus ticket reservations</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        <!-- language -->
+        <div id="a6" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold">Language</h2>
+            <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+                <li><span class="font-bold">English: </span>Fluent</li>
+                <li><span class="font-bold">Bangla: </span>Native</li>
+            </ul>
+        </div>
+        <!-- blood  -->
+        <div id="a7" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold">Blood Group</h2>
+            <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+                <li><span class="font-bold">B.G :</span>B+</li>
+            </ul>
+        </div>
+        <!-- referance -->
+        <div id="a8" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold">Skills</h2>
+            <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+                <li><strong class=" font-bold">Name:</strong> John Doe</li>
+                <li><strong class=" font-bold">Relationship:</strong> Former Manager</li>
+                <li><strong class=" font-bold">Contact:</strong> johndoe@email.com</li>
+                <li><strong class=" font-bold">Company/Organization:</strong> ABC Corp</li>
+            </ul>
+        </div>
+        <!-- contact -->
+        <div id="a9" class=" inset-0 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3">
+            <h2 class="text-2xl font-bold text-left">Conntact</h2>
+            <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+                <li><strong class="font-bold">Email: </strong><a href="mailto:shahinul.alam007@gmail.com"
+                        class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                        <i class="fa-regular fa-envelope"></i> shahinul.alam007@gmail.com
+                    </a></li>
+                <li><strong class="font-bold">Phone: </strong><a href="tel:+08801823392579"
+                        class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                        <i class="fa-solid fa-phone"></i> 01823392579
+                    </a></li>
+                <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                            href="https://www.facebook.com/profile.php?id=61556554021341"><i class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
+                <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                            href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
+                </li>
+                <li><a href="https://wa.me/8801823392579" target="_blank"
+                        class=" text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                        <i class="fa-brands fa-whatsapp"></i> Message Me on WhatsApp
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- cv end -->
+     <!-- project -->
+     <div id="projects-id" class=" inset-0 pt-28 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3 hidden">
+        <h2 class="text-2xl font-bold">Projects</h2>
+        <!-- 1 -->
+        <a href="https://shahinul22.github.io/alphabet-clash/" target="_blank">
+            <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                <figure>
+                    <img src="images/alpha.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Alphabet Clash</h2>
+                    <p>Alphabet Clash is a fast-paced letter-finding game that challenges your speed and accuracy.
+                    </p>
+                </div>
+            </div>
+        </a>
+        <!-- 2 -->
+        <a href="https://shahinul22.github.io/daisy-tea-house-/" target="_blank">
+            <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                <figure>
+                    <img src="images/tea.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Tea House</h2>
+                </div>
+            </div>
+        </a>
+        <!-- 3 -->
+        <a href="https://shahinul22.github.io/biker---zone-daisy-UI/#slide3" target="_blank">
+            <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                <figure>
+                    <img src="images/bike.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Biker Zone</h2>
+                </div>
+            </div>
+        </a>
+        <!-- 4 -->
+        <a href="https://shahinul22.github.io/geometry-genius/" target="_blank">
+            <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                <figure>
+                    <img src="images/geo.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Geometry Genius</h2>
+                </div>
+            </div>
+        </a>
+        <!-- 5 -->
+        <a href="https://github.com/shahinul22/transport-management-system" target="_blank">
+            <div class="card card-compact bg-base-100 max-w-96 h-[450px] shadow-xl">
+                <figure>
+                    <img src="images/ja.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Transport Management System</h2>
+                    <p>The Transport Management System for bus ticket booking is a Java-based GUI application
+                        designed to streamline bus ticket reservations</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <!-- contact -->
+    <div id="contact-id" class=" inset-0 pt-28 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3 hidden">
+        <h2 class="text-2xl font-bold text-left">Conntact</h2>
+        <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
+            <li><strong class="font-bold">Email: </strong><a href="mailto:shahinul.alam007@gmail.com"
+                    class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                    <i class="fa-regular fa-envelope"></i> shahinul.alam007@gmail.com
+                </a></li>
+            <li><strong class="font-bold">Phone: </strong><a href="tel:+08801823392579"
+                    class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                    <i class="fa-solid fa-phone"></i> 01823392579
+                </a></li>
+            <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                        href="https://www.facebook.com/profile.php?id=61556554021341"><i class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
+            <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                        href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
+            </li>
+            <li><a href="https://wa.me/8801823392579" target="_blank"
+                    class=" text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
+                    <i class="fa-brands fa-whatsapp"></i> Message Me on WhatsApp
+                </a></li>
+        </ul>
+    </div>
+    <!-- footer section start -->
+    <footer class=" mt-32  footer bg-neutral text-neutral-content items-center p-4 flex justify-around ">
+        <aside class="grid-flow-col items-center">
+            <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                clip-rule="evenodd" class="fill-current">
+                <path
+                    d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+                </path>
+            </svg>
+            <p>Copyright © 2024 - All right reserved by Munshi </p>
+        </aside>
+        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                    <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                    </path>
+                </svg>
+            </a>
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                    <path
+                        d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                    </path>
+                </svg>
+            </a>
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                    <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                    </path>
+                </svg>
+            </a>
+        </nav>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="js/nightMode.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
