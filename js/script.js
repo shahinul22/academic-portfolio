@@ -1,3 +1,4 @@
+
 // Utility functions
 function hideAllSections() {
     const sections = ['banner-introduction', 'mission', 'experience', 'cv', 'projects-id', 'contact-id'];
