@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Murad Munshi</title>
     <!-- custom css -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- tailwind and daisyUI -->
@@ -16,57 +15,57 @@
 
 </head>
 
-<body class="">
-    <header>
-         <!-- nav  -->
-    <div class="navbar mb-24 bg-purple-500 fixed">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
+<body class="relative">
+    <header class="">
+        <!-- nav  -->
+        <div class="fixed z-30 inset-x-0 top-0 h-16 navbar mb-24 bg-purple-500 ">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><button onclick="showHome()" class="btn">Home</button></li>
+                        <li><button onclick="showExperience()" class="btn">Experience</button></li>
+                        <li><button onclick="showProjects()" class="btn">Projects</button></li>
+                        <li><button onclick="showCV()" class="btn">CV</button></li>
+                        <li><button onclick="showContact()" class="btn">Contact</button></li>
+                    </ul>
                 </div>
-                <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <a class="btn btn-ghost text-xl">Shahinul Alam Murad</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 space-x-3">
                     <li><button onclick="showHome()" class="btn">Home</button></li>
                     <li><button onclick="showExperience()" class="btn">Experience</button></li>
+
                     <li><button onclick="showProjects()" class="btn">Projects</button></li>
                     <li><button onclick="showCV()" class="btn">CV</button></li>
                     <li><button onclick="showContact()" class="btn">Contact</button></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">Shahinul Alam Murad</a>
+            <div class="navbar-end">
+                <label class="swap swap-rotate">
+                    <!-- Dark mode toggle -->
+                    <input id="dark-mode-toggle" type="checkbox" />
+                    <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </div>
         </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 space-x-3">
-                <li><button onclick="showHome()" class="btn">Home</button></li>
-                <li><button onclick="showExperience()" class="btn">Experience</button></li>
-                
-                <li><button onclick="showProjects()" class="btn">Projects</button></li>
-                <li><button onclick="showCV()" class="btn">CV</button></li>
-                <li><button onclick="showContact()" class="btn">Contact</button></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <label class="swap swap-rotate">
-              <!-- Dark mode toggle -->
-              <input id="dark-mode-toggle" type="checkbox" />
-              <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-              </svg>
-              <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-              </svg>
-            </label>
-          </div>
-    </div>
     </header>
-   
+
 
 
     <!-- introduction(banner) section start -->
@@ -85,7 +84,8 @@
                         class="text-3xl  hover:text-blue-600">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/murad.munshi.22/" target="_blank" class="text-3xl hover:text-pink-500">
+                    <a href="https://www.instagram.com/murad.munshi.22/" target="_blank"
+                        class="text-3xl hover:text-pink-500">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/" target="_blank"
@@ -105,19 +105,20 @@
             <div class="mt-10 p-6 bg-gray-800 rounded-lg shadow-lg">
                 <h1 class="text-3xl font-bold mb-4">About Me</h1>
                 <p class="text-lg mb-4">
-                    I am <span class="font-semibold">Shahinul Alam Murad</span>, a Computer Science and Engineering
-                    student at Jahangirnagar University. I am passionate about Artificial Intelligence, Neural Networks,
-                    and Software Engineering. Currently, I am developing my skills in these fields through coursework,
-                    personal projects, and internships.
+                    I am <span class="font-semibold">Shahinul Alam Murad</span>, a third year computer science student at Department of Computer Science & Engineering . As my hobby, i love to learn new things and build up myself as a better professional. I’m also learning Java, data structure, C & machine learning. My aim is to learn more new skills and make them my own in the future. During these days i am not so much interested but i try to gain some experience of life and people around me which can help me with some new things too.
                 </p>
                 <p class="text-lg mb-4">
-                    In my free time, I enjoy gardening, photography, and spending time with my cats. I am also
-                    constantly learning new technologies to stay updated with the latest trends in software development.
+                    In my free time, I enjoy watching movie, photography, and spending time with my cats. I am also constantly learning new technologies to stay updated with the latest trends in software development.
                 </p>
                 <p class="text-lg">Feel free to connect with me through any of the links above!</p>
                 <div class="p-4">
-                    <button class="btn btn-outline btn-accent"><i class="fas fa-download"></i> Download CV</button>
+                    <a href="images/Shahinul-resume.pdf" download="Shahinul_resume">
+                        <button class="btn btn-outline btn-accent">
+                            <i class="fas fa-download"></i> Download CV
+                        </button>
+                    </a>
                 </div>
+                
 
             </div>
 
@@ -473,16 +474,17 @@
         <div id="a5" class=" inset-0 flex flex-col justify-center items-center max-w-2xl w-full mx-auto p-3">
             <h2 class="text-2xl font-bold">Skills</h2>
             <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
-                <li>Languages & Frameworks: JAVA, C++, HTML, CSS, JavaScript, React, Bootstrap</li>
-                <li>Version Control: Git, GitHub</li>
-                <li>Responsive Web Design: Mobile-first design, Flexbox, CSS Grid</li>
-                <li>Tools & Technologies: Visual Studio Code, Code Blocks, npm, Webpack, Babel, Chrome Developer Tools
+                <li><span class="font-bold">Languages & Frameworks:</span> JAVA, C++, HTML, CSS, JavaScript, React, Bootstrap</li>
+                <li><span class="font-bold">Version Control:</span> Git, GitHub</li>
+                <li><span class="font-bold">Responsive Web Design:</span> Mobile-first design, Flexbox, CSS Grid</li>
+                <li><span class="font-bold">Tools & Technologies:</span>  Visual Studio Code, Code Blocks, npm, Webpack, Babel, Chrome Developer Tools
                 </li>
-                <li>Web Performance Optimization: Code splitting, lazy loading, image optimization</li>
+                <li><span class="font-bold"> Web Performance Optimization:</span> Code splitting, lazy loading, image optimization</li>
             </ul>
         </div>
         <!-- project -->
-        <div id="projects" class=" inset-0 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3">
+        <div id="projects"
+            class=" inset-0 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3">
             <h2 class="text-2xl font-bold">Projects</h2>
             <!-- 1 -->
             <a href="https://shahinul22.github.io/alphabet-clash/" target="_blank">
@@ -582,10 +584,14 @@
                         class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
                         <i class="fa-solid fa-phone"></i> 01823392579
                     </a></li>
-                <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
-                            href="https://www.facebook.com/profile.php?id=61556554021341"><i class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
-                <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
-                            href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
+                <li><strong
+                        class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                            href="https://www.facebook.com/profile.php?id=61556554021341"><i
+                                class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
+                <li><strong
+                        class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                            href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i
+                                class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
                 </li>
                 <li><a href="https://wa.me/8801823392579" target="_blank"
                         class=" text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
@@ -595,8 +601,9 @@
         </div>
     </section>
     <!-- cv end -->
-     <!-- project -->
-     <div id="projects-id" class=" inset-0 pt-28 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3 hidden">
+    <!-- project -->
+    <div id="projects-id"
+        class=" inset-0 pt-28 grid grid-cols-1 lg:grid-cols-2 gap-2 space-x-3  max-w-2xl w-full mx-auto p-3 hidden">
         <h2 class="text-2xl font-bold">Projects</h2>
         <!-- 1 -->
         <a href="https://shahinul22.github.io/alphabet-clash/" target="_blank">
@@ -660,7 +667,8 @@
 
     </div>
     <!-- contact -->
-    <div id="contact-id" class=" inset-0 pt-28 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3 hidden">
+    <div id="contact-id"
+        class=" inset-0 pt-28 flex flex-col justify-center items-start max-w-2xl w-full mx-auto p-3 hidden">
         <h2 class="text-2xl font-bold text-left">Conntact</h2>
         <ul class="mt-2 p-4 space-y-2 list-disc text-gray-500">
             <li><strong class="font-bold">Email: </strong><a href="mailto:shahinul.alam007@gmail.com"
@@ -671,10 +679,14 @@
                     class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
                     <i class="fa-solid fa-phone"></i> 01823392579
                 </a></li>
-            <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
-                        href="https://www.facebook.com/profile.php?id=61556554021341"><i class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
-            <li><strong class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
-                        href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
+            <li><strong
+                    class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                        href="https://www.facebook.com/profile.php?id=61556554021341"><i
+                            class="fa-brands fa-facebook-f"></i> Facebook</a></strong></li>
+            <li><strong
+                    class="text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white "><a
+                        href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/"><i
+                            class="fa-brands fa-linkedin-in"></i> Linkedin</a></strong>
             </li>
             <li><a href="https://wa.me/8801823392579" target="_blank"
                     class=" text-blue-500 px-4 py-2 rounded-lg text-lg font-medium hover:bg-purple-400 hover:text-white ">
@@ -699,14 +711,16 @@
                     class="text-3xl hover:text-blue-600">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/murad.munshi.22/" target="_blank" class="text-3xl  hover:text-pink-500">
+                <a href="https://www.instagram.com/murad.munshi.22/" target="_blank"
+                    class="text-3xl  hover:text-pink-500">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/md-shahinul-alam-murad-319776250/" target="_blank"
                     class="text-3xl text-white hover:text-blue-400">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/shahinul22" target="_blank" class="text-3xl text-white hover:text-purple-500">
+                <a href="https://github.com/shahinul22" target="_blank"
+                    class="text-3xl text-white hover:text-purple-500">
                     <i class="fab fa-github"></i>
                 </a>
         </nav>
